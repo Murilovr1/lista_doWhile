@@ -6,10 +6,15 @@
     */
 
     //Entrada
-
+    let nome = prompt("Informe seu nome de usuário").trim().toUpperCase();
+    let senha = prompt("Digite a sua senha").trim().toUpperCase();
 
     //Processamento
-
+    while (senha == nome) {
+        alert(`Digite uma senha que n seja igual ao seu nome`);
+        nome = prompt("Informe seu nome de usuário").trim().toUpperCase();
+        senha = prompt("Digite a sua senha").trim().toUpperCase();   
+    }
 
     //Saída
 
