@@ -14,11 +14,21 @@
     */
 
     //Entrada
-
-
+    let media = "";
+    let maiorIdade = "";
+    let menorIdade  = "";
+    let quantidadeF = "";
+    let idadeMSalario = "";
+    let sexoMSalario = ""; 
     //Processamento
-
-
+    do {
+        media = parseFloat(prompt(`Qual a média dos salários da região?`).trim().replace(",", "."));
+        maiorIdade = parseInt(prompt(`Qual a maior idade deste grupo?`).trim());
+        menorIdade = parseInt(prompt(`Qual a menor idade deste grupo?`).trim());
+        quantidadeF = parseInt(prompt(`Quantas mulheres há na região?`).trim());
+        idadeMSalario = parseInt(prompt(`Qual a idade da pessoa com o menor salário?`).trim());
+        sexoMSalario  = prompt((`Qual o gênero da pessoa com menor salário?`).trim());
+    } while (maiorIdade > 0 && menorIdade > 0 && idadeMSalario > 0);
     //Saída
 
 </script>

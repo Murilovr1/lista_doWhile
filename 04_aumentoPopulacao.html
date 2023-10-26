@@ -9,11 +9,21 @@
     */
 
     //Entrada
-    let taxaA = 2400;
-    let taxaB = 3000;
+    let popuA = 80000;
+    let popuB = 200000;
+    let anosA = 0;
 
     //Processamento
-    
+    while (popuA < popuB) {
+        popuB = popuB * 1.015;
+        popuA = popuA * 1.03;
+        anosA++
+    }
+
+    while (popuA >= popuB) {
+        alert(`Demorara ${anosA} anos para B se igualar ou ultrapassar A`);
+        
+    }
 
 
     //Saída

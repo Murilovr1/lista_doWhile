@@ -11,20 +11,34 @@
     */
 
     //Entrada
-    let nome = prompt("Insira seu nome").trim().toUpperCase();
-    let idade = Number(prompt("Insira sua idade").trim());
-    let sal = Number(prompt("Insira seu salário").trim().toUpperCase());
-    let sexo = prompt("Vc é M(masculino) ou F(feminino)").trim();
-    let sc = prompt("S, C, V ou D?").trim().toLowerCase();
+    let nome = "";
+    let idade = 0;
+    let sal = 0;
+    let sexo = "";
+    let sc = "";
 
     //Processamento
-    if (nome <! 3 || idade != "0" || idade != "150" || sal < "0" || sexo != "F" || sexo != "M" || sc != "s" || sc != "c" || sc != "v" || sc != "d") {
-        alert(`Por favor, responda corretamente as questões anteriores`);
+    do {
+        nome = prompt("Insira seu nome");
+    } while (nome.length <= 3);
+
+    do {
+        idade = Number(prompt("Insira sua idade"));
+    } while (idade <= 0 || idade >= 150);
+
+    do {
+        sal = Number(prompt("Insira seu salário"));
+    } while ( sal <= 0);
+
+    do {
+        sexo = prompt("Insira seu sexo: M(masculino) ou F(feminino)").toUpperCase();
+    } while (sexo != "M" && sexo != "F");
+
+    do {
+        sc = prompt("Insira seu estado civil: s, c, v ou d").toUpperCase();
+    } while (sc != "s" && sc != "c" && sc != "v" && sc != "d");
+   
     
-    while () {
-        
-    }
-}
 
     //Saída
 </script>
